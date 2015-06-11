@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="SwiftExample" customModuleProvider="target">
+            <connections>
+                <outlet property="backView" destination="muE-OE-HWX" id="LcE-Qq-YTm"/>
+                <outlet property="container" destination="NoT-q4-dc4" id="kxe-Ed-j2T"/>
+                <outlet property="frontView" destination="Giu-fO-lzi" id="MiN-k9-TQN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoT-q4-dc4" userLabel="containerView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muE-OE-HWX" userLabel="back">
+                            <rect key="frame" x="175" y="175" width="250" height="250"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.14473684210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="250" id="7Zi-cO-mWf"/>
+                                <constraint firstAttribute="width" constant="250" id="S0C-GL-cfM"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="mCi-cE-He4"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="vGP-dd-pvN"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Giu-fO-lzi" userLabel="front">
+                            <rect key="frame" x="175" y="175" width="250" height="250"/>
+                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="0bN-gW-lnJ"/>
+                                <constraint firstAttribute="width" constant="250" id="45j-AK-1Fi"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="BPv-Nd-w1V"/>
+                                <constraint firstAttribute="height" constant="250" id="m4d-v4-JGp"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="Giu-fO-lzi" secondAttribute="centerX" id="L1o-97-CsP"/>
+                        <constraint firstAttribute="centerY" secondItem="Giu-fO-lzi" secondAttribute="centerY" id="h23-Ag-cBz"/>
+                        <constraint firstAttribute="centerX" secondItem="muE-OE-HWX" secondAttribute="centerX" id="oW0-Ag-yLC"/>
+                        <constraint firstAttribute="centerY" secondItem="muE-OE-HWX" secondAttribute="centerY" id="xyG-YG-ZDV"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="qmL-7W-Dbr" appends="YES" id="Kb4-oZ-Xw7"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NoT-q4-dc4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7YX-bj-Hia"/>
+                <constraint firstItem="NoT-q4-dc4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hqh-SL-Zyc"/>
+                <constraint firstAttribute="bottom" secondItem="NoT-q4-dc4" secondAttribute="bottom" id="Ny7-Nt-MTM"/>
+                <constraint firstAttribute="trailing" secondItem="NoT-q4-dc4" secondAttribute="trailing" id="Waw-ed-6FJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="374" y="424"/>
+        </view>
+        <tapGestureRecognizer id="qmL-7W-Dbr">
+            <connections>
+                <action selector="tapToFlip:" destination="-1" id="nxR-02-kU6"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
