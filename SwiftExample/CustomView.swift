@@ -18,6 +18,12 @@ import UIKit
     @IBOutlet weak var frontView: UIView!
     @IBOutlet weak var backView: UIView!
     
+    @IBAction func orderButton(sender: UIButton) {
+        
+        
+        
+    }
+    
     var flipped = false
     
     @IBAction func tapToFlip(sender: UITapGestureRecognizer) {
@@ -26,9 +32,9 @@ import UIKit
         let views = (frontView: self.frontView, backView: self.backView)
         let transitionOptons = UIViewAnimationOptions.TransitionFlipFromLeft
         
-        UIView.transitionWithView(self.frontView, duration: 1, options: transitionOptons, animations: {
+        UIView.transitionWithView(self.frontView, duration: 0.5, options: transitionOptons, animations: {
             self.swapView()
-            UIView.transitionWithView(self.backView, duration: 1, options: transitionOptons, animations: {
+            UIView.transitionWithView(self.backView, duration: 0.5, options: transitionOptons, animations: {
                 
                 }, completion: { finished in
             })
@@ -52,6 +58,7 @@ import UIKit
     }
     
 
+    
     
     var view:UIView!
     
